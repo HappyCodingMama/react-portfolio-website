@@ -45,11 +45,27 @@
   background: var(--color-dark);
 }
 
-.about__details h4 {
+.about__detailsLeft {
+  cursor: pointer;
+}
+
+.about__detailsLeft:hover {
+  color: var(--color-primary-light);
+}
+
+.about__detailsLeft h4 {
   margin: 1rem 0 1rem;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 2.2;
+}
+
+.about__detailsRight {
+  cursor: pointer;
+}
+
+.about__detailsRight:hover {
+  color: var(--color-primary-light);
 }
 
 .about__detailsRight h4 {

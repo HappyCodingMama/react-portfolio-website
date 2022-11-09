@@ -4,24 +4,25 @@ import { BiPlus } from 'react-icons/bi';
 import { BiMinus } from 'react-icons/bi';
 
 const About = () => {
-  const [clicked, setClicked] = useState(false);
+  const [clickedLeft, setClickedLeft] = useState(false);
+  const [clickedRight, setClickedRight] = useState(false);
 
-  const index = document.querySelector('.about__details');
+  const index = document.querySelector('.about__detailsLeft');
 
   const indexRight = document.querySelector('.about__detailsRight');
 
   const toggle = (index) => {
-    if (clicked === index) {
-      return setClicked(null);
+    if (clickedLeft === index) {
+      return setClickedLeft(null);
     }
-    setClicked(index);
+    setClickedLeft(index);
   };
 
   const toggleRight = (indexRight) => {
-    if (clicked === indexRight) {
-      return setClicked(null);
+    if (clickedRight === indexRight) {
+      return setClickedRight(null);
     }
-    setClicked(indexRight);
+    setClickedRight(indexRight);
   };
 
   return (
@@ -45,12 +46,12 @@ const About = () => {
         <div className='about_containerDetail'>
           <article className='about__dropdown'>
             <div
-              className='about__details'
+              className='about__detailsLeft'
               onClick={() => toggle(index)}
               key={index}
             >
               <h4>
-                {clicked === index ? (
+                {clickedLeft === index ? (
                   <BiMinus className='btn__icons' />
                 ) : (
                   <BiPlus className='btn__icons' />
@@ -58,9 +59,9 @@ const About = () => {
                 Education
               </h4>
             </div>
-            {clicked === index ? (
+            {clickedLeft === index ? (
               <dir className='dropdown'>
-                <p>2005 - 2009 | Bachelor of Multimeda</p>
+                <p>2005 - 2009 | Bachelor of Multimedia</p>
                 <p>2002 - 2004 | Associated Diploma of Computer Graphics</p>
               </dir>
             ) : null}
@@ -73,7 +74,7 @@ const About = () => {
               key={indexRight}
             >
               <h4>
-                {clicked === indexRight ? (
+                {clickedRight === indexRight ? (
                   <BiMinus className='btn__icons' />
                 ) : (
                   <BiPlus className='btn__icons' />
@@ -81,7 +82,7 @@ const About = () => {
                 Where I’ve Worked
               </h4>
             </div>
-            {clicked === indexRight ? (
+            {clickedRight === indexRight ? (
               <dir className='dropdown'>
                 <p>2005 - 2009 | CJ EnM</p>
                 <p>2002 - 2004 | FOX network Korea</p>

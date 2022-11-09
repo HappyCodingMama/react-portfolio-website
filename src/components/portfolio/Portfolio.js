@@ -11,6 +11,13 @@ const Portfolio = () => {
   return (
     <section id='portfolio'>
       <h2 className='title'>My Recent Work.</h2>
+      <div className='container portfolioTitle'>
+        <h1>Web App</h1>
+        <p>
+          Making a UX portfolio easy for visitors to find their way around
+          allows them to move from page to page without feeling frustrated.
+        </p>
+      </div>
       <div className='container container__cardTop'>
         <article className='portfolio__card'>
           <div className='portfolio__cardImg'>
@@ -81,6 +88,14 @@ const Portfolio = () => {
           </div>
         </article>
       </div>
+      <div className='container portfolioTitle'>
+        <h1>UI/UX</h1>
+        <p>
+          Making a UX portfolio easy for visitors to find their way around
+          allows them to move from page to page without feeling frustrated.
+        </p>
+      </div>
+
       <div className='container portfolio__container'>
         <article className='portfolio__item'>
           <div className='portfolio__item-image'>
